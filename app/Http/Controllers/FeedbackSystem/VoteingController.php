@@ -20,8 +20,8 @@ class VoteingController extends Controller
         return response()->json(['message' => 'Upvoted successfully']);
     }
 
-    public function downVote(Request $request){
-        $this->voteingRepository->upvote($request);
+     public function downVote(Request $request){
+        $this->voteingRepository->downvote($request);
         return response()->json(['message' => 'Downvoted successfully']);
     }
 }
