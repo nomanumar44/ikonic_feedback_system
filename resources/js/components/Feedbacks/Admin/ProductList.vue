@@ -103,7 +103,7 @@
                             @click="downvoteFeedback(feedback?.id, index)"
                             :disabled="feedback?.votes.user && feedback?.votes.vote_type === 'downvote'"
                             >
-                            <i class="fas fa-thumbs-down"></i><span class="text-black">{{ feedback?.votes.reduce((total,item) => item.vote_type == 'upvote' ? total + 1 : 0,0) }}</span>
+                             <i class="fas fa-thumbs-down"></i><span class="text-black">{{ feedback?.votes.reduce((total,item) => item.vote_type == 'downvote' ? total + 1 : 0,0) }}</span>
                         </button>
                         <button class="btn btn-sm btn-primary" @click="showUserComments(index)">
                             Show Comments
