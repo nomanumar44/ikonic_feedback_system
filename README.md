@@ -53,18 +53,18 @@ To get started with the Product Feedback Tool, follow these steps:
 4. **Access the Application**: Open your web browser and access the application at `http://feedback_system.test` for the backend and `http://feedback_system.test` for the frontend.
 
 5. **Run Commmand First**: Customize the application to meet your specific requirements.
-  - Run php artisan queue:listen to run queue to send Emails effecient
-  - Run php artisan websockets:serve command to Run websockets server to send real time notification 
+  - Run `php artisan queue:listen to run queue` to send Emails effecient
+  - Run `php artisan websockets:serve` command to Run websockets server to send real time notification 
 6. **Run Migrations and Seeder** to start running project run these command 
-  - Run php artisan migrate:fresh --seed Command to migrate and seed 
+  - Run `php artisan migrate:fresh --seed` Command to migrate and seed 
 7. **After all of that**
    - Run npm run watch and start project 
 8. **How it work** 
   - like on feed back button to login 
   - users seeder also create some users
 9. **For Admin User** 
-    - Email admin@gmail.com
+    - Email `admin@gmail.com`
     - Password admin123
 10. **For Users**
-    - Email user1@gmail.com
+    - Email `user1@gmail.com`
     - Password  user123
