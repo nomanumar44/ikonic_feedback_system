@@ -15,7 +15,60 @@
             </div>
         </div>
     </header>
+    <div
+            class="
+  flex
+  items-center
+  justify-between
+  max-w-full
+  mx-auto
+  px-4
+  py-4
+  sm:px-6
+  lg:px-8
+"
+        >
+            <div>
+                show
+                <select @change="updateLimit($event.target.value)">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                entries
+            </div>
 
+            <div>
+                <input
+                    placeholder="Search..."
+                    type="text"
+                    class="
+      block
+      w-full
+      bg-white
+      py-2
+      pl-3
+      pr-3
+      border border-transparent
+      rounded-md
+      leading-5
+      text-gray-900
+      placeholder-gray-500
+      focus:outline-none
+      focus:ring-2
+      focus:ring-offset-2
+      focus:ring-offset-blue-600
+      focus:ring-white
+      focus:border-white
+      sm:text-sm
+    "
+                    @keyup="updateSearchParameter($event.target.value)"
+                />
+            </div>
+
+
+        </div>
     <div class="row">
         <div class="col-md-12">
             <div class="box">
