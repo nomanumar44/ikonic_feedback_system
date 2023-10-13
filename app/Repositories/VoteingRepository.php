@@ -13,7 +13,7 @@ class VoteingRepository implements VoteingRepositoryInterface
     {
         $user_id = auth()->id();
         $existingVote = Vote::where('user_id', $user_id)
-            ->where('feedback_id', $request->feedback_id)
+            ->where('feedback_id', $request->feedback_id)->where('vote_type','upvote')
             ->first();
 
         if ($existingVote) {
@@ -38,8 +38,8 @@ class VoteingRepository implements VoteingRepositoryInterface
     {
         $user_id = auth()->id();
 
-        $existingVote = Vote::where('user_id', $user_id)
-            ->where('feedback_id', $request->feedback_id)
+       $existingVote = Vote::where('user_id', $user_id)
+            ->where('feedback_id', $request->feedback_id)->where('vote_type','downvote')
             ->first();
 
         if ($existingVote) {
